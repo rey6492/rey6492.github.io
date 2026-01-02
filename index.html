@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>produtycalabayhost.biz.id - Website Pertama</title>
+    <title>produtycalabayhost.biz.id - Website Resmi</title>
+    <meta name="description" content="Website resmi dengan domain produtycalabayhost.biz.id, hosting gratis oleh GitHub Pages">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* RESET DAN BASE */
         * {
             margin: 0;
             padding: 0;
@@ -13,127 +16,347 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
         }
         
+        /* CONTAINER */
         .container {
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        h2 {
-            font-size: 1.8rem;
-            margin: 25px 0 15px;
-            color: #ffd700;
-        }
-        
-        .status {
-            background: rgba(0, 255, 0, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 5px solid #00ff00;
-        }
-        
-        .info-box {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-            text-align: left;
-        }
-        
-        ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        
-        li {
-            margin: 8px 0;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #ff4081;
+        /* HEADER */
+        header {
+            background: linear-gradient(90deg, #2c3e50 0%, #4a6491 100%);
             color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: #3498db;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: transform 0.3s, background 0.3s;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
         
-        .cta-button:hover {
-            background: #f50057;
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 50px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
             transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .container { padding: 20px; }
+        /* FEATURES */
+        .features {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 SELAMAT! 🎉</h1>
-        <p style="font-size: 1.3rem; margin-bottom: 20px;">
-            Domain <strong>produtycalabayhost.biz.id</strong> Anda SUDAH AKTIF!
-        </p>
-        
-        <div class="status">
-            <h2>✅ STATUS: ONLINE</h2>
-            <p>Domain sudah terhubung ke GitHub Pages</p>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-globe"></i>
+                    <span>produtycalabayhost</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#services">Layanan</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        
-        <div class="info-box">
-            <h2>📋 Informasi Website:</h2>
-            <ul>
-                <li><strong>Domain:</strong> produtycalabayhost.biz.id</li>
-                <li><strong>SSL:</strong> HTTPS Aktif (Otomatis)</li>
-                <li><strong>Hosting:</strong> GitHub Pages (Gratis)</li>
-                <li><strong>Traffic:</strong> Unlimited</li>
-                <li><strong>Update:</strong> Kapan saja via GitHub</li>
-            </ul>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Selamat Datang di Website Kami</h1>
+            <p>Website profesional dengan domain custom <strong>produtycalabayhost.biz.id</strong>, dihosting secara GRATIS menggunakan GitHub Pages. Aman, cepat, dan mudah diupdate.</p>
+            <a href="#services" class="btn">Jelajahi Layanan <i class="fas fa-arrow-right"></i></a>
         </div>
-        
-        <div class="info-box">
-            <h2>🚀 Langkah Selanjutnya:</h2>
-            <ol style="margin-left: 20px;">
-                <li>Upload file ini ke GitHub Pages</li>
-                <li>Customize website sesuai kebutuhan</li>
-                <li>Tambah konten, gambar, dll</li>
-                <li>Promosikan website Anda!</li>
-            </ol>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="services">
+        <div class="container">
+            <h2 class="section-title">Layanan Kami</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Pembuatan website responsif dan modern sesuai kebutuhan bisnis Anda.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Hosting Gratis</h3>
+                    <p>Hosting website dengan GitHub Pages secara gratis tanpa biaya bulanan.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>SSL Otomatis</h3>
+                    <p>Dapatkan SSL/HTTPS gratis untuk keamanan website Anda.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Update Mudah</h3>
+                    <p>Update website kapan saja melalui GitHub tanpa perlu technical skill.</p>
+                </div>
+            </div>
         </div>
-        
-        <p style="margin-top: 30px; font-size: 1.1rem;">
-            Website ini dibuat dengan ❤️ menggunakan HTML & CSS
-        </p>
-        
-        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3);">
-            <p>© 2024 produtycalabayhost.biz.id</p>
-            <p style="font-size: 0.9rem; opacity: 0.8;">Hosting Gratis oleh GitHub Pages</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">
+                        <i class="fas fa-globe-asia"></i>
+                        <span>produtycalabayhost.biz.id</span>
+                    </div>
+                    <p>Website profesional dengan hosting gratis. Mulai bangun online presence Anda sekarang!</p>
+                </div>
+                
+                <div>
+                    <h3>Kontak</h3>
+                    <p><i class="fas fa-envelope"></i> email@example.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Indonesia</p>
+                </div>
+                
+                <div>
+                    <h3>Teknologi</h3>
+                    <p>• GitHub Pages</p>
+                    <p>• Custom Domain</p>
+                    <p>• SSL Gratis</p>
+                    <p>• HTML5 & CSS3</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 produtycalabayhost.biz.id • Dibuat dengan ❤️ menggunakan GitHub Pages • Update terakhir: 2 Januari 2024</p>
+                <p style="margin-top: 10px;">
+                    <i class="fas fa-check-circle"></i> Status: <strong>ONLINE</strong> • 
+                    <i class="fas fa-bolt"></i> Hosting: <strong>GRATIS</strong> • 
+                    <i class="fas fa-lock"></i> SSL: <strong>AKTIF</strong>
+                </p>
+            </div>
         </div>
-    </div>
+    </footer>
+
+    <script>
+        // Smooth scroll untuk navigasi
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Animasi saat scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.2)';
+            } else {
+                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Alert untuk tombol
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            if(this.getAttribute('href') === '#services') {
+                e.preventDefault();
+                alert('Selamat! Website Anda sudah aktif. Sekarang Anda bisa mulai menambahkan konten sesuai kebutuhan.');
+            }
+        });
+    </script>
 </body>
 </html>
