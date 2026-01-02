@@ -3,359 +3,653 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>produtycalabayhost.biz.id - Website Resmi</title>
-    <meta name="description" content="Website resmi dengan domain produtycalabayhost.biz.id, hosting gratis oleh GitHub Pages">
+    <title>SELL SCRIPT • SEWABOT • SERVICE BOT - TypeScript ESM | YouTube @bayxd077</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* RESET DAN BASE */
+        /* MODERN DESIGN */
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --ts-blue: #3178c6;
+            --dark: #111827;
+            --light: #f8fafc;
+            --card: #ffffff;
+            --border: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --radius-lg: 16px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: var(--light);
+            color: var(--dark);
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
         }
-        
-        /* CONTAINER */
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* HEADER */
-        header {
-            background: linear-gradient(90deg, #2c3e50 0%, #4a6491 100%);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+
+        /* HEADER BESAR */
+        .main-header {
+            background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-lg);
         }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+        .main-title {
+            font-size: 3.2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
         }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            display: flex;
+
+        .price-badge {
+            display: inline-flex;
             align-items: center;
             gap: 10px;
-        }
-        
-        .logo i {
-            color: #3498db;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        
-        nav a:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-2px);
-        }
-        
-        /* HERO SECTION */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 50px;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #3498db;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
             color: white;
             padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background: #2980b9;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        /* FEATURES */
-        .features {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #2c3e50;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            color: #3498db;
-            margin-bottom: 20px;
-        }
-        
-        /* FOOTER */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 50px 0 20px;
-            margin-top: 50px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-logo {
-            font-size: 1.5rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin: 20px 0;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--ts-blue);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin: 10px 5px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            padding: 12px 25px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
         }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+
+        .social-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        .social-btn.youtube {
+            background: #ff0000;
+            border: none;
+        }
+
+        /* PRODUK GRID */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .product-card {
+            background: var(--card);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .product-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin: 15px 0;
+        }
+
+        .product-price span {
             font-size: 0.9rem;
-            opacity: 0.8;
+            color: #6b7280;
+            font-weight: 500;
         }
-        
-        /* RESPONSIVE */
+
+        .tech-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #e0f2fe;
+            color: var(--ts-blue);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 5px;
+            font-weight: 600;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list li i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            width: 100%;
+            justify-content: center;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* SERVICE SECTION */
+        .service-section {
+            background: #f0f9ff;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin: 40px 0;
+            border-left: 5px solid var(--primary);
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--dark);
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
+            .main-title { font-size: 2.2rem; }
+            .products-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 15px; }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-globe"></i>
-                    <span>produtycalabayhost</span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Beranda</a></li>
-                        <li><a href="#about">Tentang</a></li>
-                        <li><a href="#services">Layanan</a></li>
-                        <li><a href="#contact">Kontak</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>Selamat Datang di Website Kami</h1>
-            <p>Website profesional dengan domain custom <strong>produtycalabayhost.biz.id</strong>, dihosting secara GRATIS menggunakan GitHub Pages. Aman, cepat, dan mudah diupdate.</p>
-            <a href="#services" class="btn">Jelajahi Layanan <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="features" id="services">
-        <div class="container">
-            <h2 class="section-title">Layanan Kami</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Website Development</h3>
-                    <p>Pembuatan website responsif dan modern sesuai kebutuhan bisnis Anda.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Hosting Gratis</h3>
-                    <p>Hosting website dengan GitHub Pages secara gratis tanpa biaya bulanan.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>SSL Otomatis</h3>
-                    <p>Dapatkan SSL/HTTPS gratis untuk keamanan website Anda.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Update Mudah</h3>
-                    <p>Update website kapan saja melalui GitHub tanpa perlu technical skill.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-logo">
-                        <i class="fas fa-globe-asia"></i>
-                        <span>produtycalabayhost.biz.id</span>
-                    </div>
-                    <p>Website profesional dengan hosting gratis. Mulai bangun online presence Anda sekarang!</p>
-                </div>
-                
-                <div>
-                    <h3>Kontak</h3>
-                    <p><i class="fas fa-envelope"></i> email@example.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Indonesia</p>
-                </div>
-                
-                <div>
-                    <h3>Teknologi</h3>
-                    <p>• GitHub Pages</p>
-                    <p>• Custom Domain</p>
-                    <p>• SSL Gratis</p>
-                    <p>• HTML5 & CSS3</p>
-                </div>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="main-header">
+            <h1 class="main-title">SELL SCRIPT • SEWABOT • SERVICE BOT</h1>
+            
+            <div class="price-badge">
+                <i class="fas fa-tags"></i>
+                HARGA TERJANGKAU • KUALITAS PREMIUM
             </div>
             
-            <div class="copyright">
-                <p>© 2024 produtycalabayhost.biz.id • Dibuat dengan ❤️ menggunakan GitHub Pages • Update terakhir: 2 Januari 2024</p>
-                <p style="margin-top: 10px;">
-                    <i class="fas fa-check-circle"></i> Status: <strong>ONLINE</strong> • 
-                    <i class="fas fa-bolt"></i> Hosting: <strong>GRATIS</strong> • 
-                    <i class="fas fa-lock"></i> SSL: <strong>AKTIF</strong>
-                </p>
+            <div>
+                <span class="tech-badge">
+                    <i class="fab fa-js"></i> TypeScript ESM Only
+                </span>
+                <span class="tech-badge">
+                    <i class="fas fa-bolt"></i> 300+ • 700+ • 1700+ Fitur
+                </span>
             </div>
-        </div>
-    </footer>
+            
+            <p style="color: #d1d5db; max-width: 800px; margin: 20px auto; font-size: 1.1rem;">
+                WhatsApp Bot dengan teknologi TypeScript ESM terbaru • Performa maksimal • Update rutin
+            </p>
+            
+            <div class="social-links">
+                <a href="https://youtube.com/@bayxd077" class="social-btn youtube" target="_blank">
+                    <i class="fab fa-youtube"></i> @bayxd077
+                </a>
+                <a href="https://wa.me/6282353377184" class="social-btn">
+                    <i class="fab fa-whatsapp"></i> 6282353377184
+                </a>
+                <a href="https://t.me/BayxdHosting" class="social-btn">
+                    <i class="fab fa-telegram"></i> @BayxdHosting
+                </a>
+            </div>
+        </header>
+
+        <!-- SELL SCRIPT (HARGA LEBIH MAHAL) -->
+        <section>
+            <h2 style="font-size: 2.2rem; margin-bottom: 25px; color: var(--dark); text-align: center;">
+                <i class="fas fa-code"></i> SELL SCRIPT BOT WA
+            </h2>
+            <p style="text-align: center; color: #6b7280; margin-bottom: 30px;">
+                Beli source code lengkap dengan teknologi TypeScript ESM • Full ownership • Free updates
+            </p>
+            
+            <div class="products-grid">
+                <!-- BASIC SCRIPT -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--secondary);">BASIC</div>
+                    <div class="product-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3 class="product-title">Basic Script</h3>
+                    <p style="color: #6b7280; margin-bottom: 15px;">Script WhatsApp Bot dengan fitur dasar</p>
+                    
+                    <div class="product-price">Rp 80.000</div>
+                    
+                    <div class="tech-tag">
+                        <i class="fab fa-js"></i> TypeScript ESM
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 100+ Fitur Dasar</li>
+                        <li><i class="fas fa-check"></i> Auto Reply System</li>
+                        <li><i class="fas fa-check"></i> Downloader Module</li>
+                        <li><i class="fas fa-check"></i> TypeScript Source Code</li>
+                        <li><i class="fas fa-check"></i> Documentation</li>
+                        <li><i class="fas fa-check"></i> Support 1 Minggu</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20order%20BASIC%20SCRIPT%2080k" 
+                       class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Order Sekarang
+                    </a>
+                </div>
+
+                <!-- PREMIUM SCRIPT -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--accent);">PREMIUM</div>
+                    <div class="product-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="product-title">Premium Script</h3>
+                    <p style="color: #6b7280; margin-bottom: 15px;">Script WhatsApp Bot dengan fitur lengkap</p>
+                    
+                    <div class="product-price">Rp 150.000</div>
+                    
+                    <div class="tech-tag">
+                        <i class="fab fa-js"></i> TypeScript ESM Only
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 300+ Fitur Lengkap</li>
+                        <li><i class="fas fa-check"></i> AI ChatGPT Integration</li>
+                        <li><i class="fas fa-check"></i> Multi Device Support</li>
+                        <li><i class="fas fa-check"></i> Web Dashboard</li>
+                        <li><i class="fas fa-check"></i> MongoDB Database</li>
+                        <li><i class="fas fa-check"></i> Support 1 Bulan</li>
+                        <li><i class="fas fa-check"></i> Free Updates 3 Bulan</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20order%20PREMIUM%20SCRIPT%20150k" 
+                       class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Order Sekarang
+                    </a>
+                </div>
+
+                <!-- ULTIMATE SCRIPT -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--primary);">ULTIMATE</div>
+                    <div class="product-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="product-title">Ultimate Script</h3>
+                    <p style="color: #6b7280; margin-bottom: 15px;">Script WhatsApp Bot dengan semua fitur premium</p>
+                    
+                    <div class="product-price">Rp 250.000</div>
+                    
+                    <div class="tech-tag">
+                        <i class="fab fa-js"></i> TypeScript ESM Plugin
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> 700+ Fitur Ultimate</li>
+                        <li><i class="fas fa-check"></i> AI GPT-4 + Gemini</li>
+                        <li><i class="fas fa-check"></i> Voice & Image Recognition</li>
+                        <li><i class="fas fa-check"></i> Advanced Dashboard</li>
+                        <li><i class="fas fa-check"></i> Custom Module Request</li>
+                        <li><i class="fas fa-check"></i> Support 3 Bulan</li>
+                        <li><i class="fas fa-check"></i> Lifetime Updates</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20order%20ULTIMATE%20SCRIPT%20250k" 
+                       class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Order Sekarang
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEWA BOT (HARGA LEBIH MURAH) -->
+        <section style="margin-top: 60px;">
+            <h2 style="font-size: 2.2rem; margin-bottom: 25px; color: var(--dark); text-align: center;">
+                <i class="fas fa-robot"></i> SEWA BOT WA
+            </h2>
+            <p style="text-align: center; color: #6b7280; margin-bottom: 30px;">
+                Sewa bot yang sudah online 24/7 • No installation needed • Server premium
+            </p>
+            
+            <div class="products-grid">
+                <!-- SEWA 300+ -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--secondary);">300+ FITUR</div>
+                    <div class="product-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="product-title">Sewa Bot Basic</h3>
+                    <p style="color: #6b7280; margin-bottom: 15px;">Sewa bot dengan 300+ fitur untuk kebutuhan standar</p>
+                    
+                    <div class="product-price">Rp 50.000 <span>/ bulan</span></div>
+                    
+                    <div class="tech-tag">
+                        <i class="fab fa-js"></i> TypeScript ESM
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Bot Online 24/7</li>
+                        <li><i class="fas fa-check"></i> 300+ Fitur Lengkap</li>
+                        <li><i class="fas fa-check"></i> TypeScript ESM Plugin</li>
+                        <li><i class="fas fa-check"></i> Server Premium</li>
+                        <li><i class="fas fa-check"></i> Auto Backup</li>
+                        <li><i class="fas fa-check"></i> Support Priority</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20BASIC%2050k%2Fbulan" 
+                       class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Sewa Sekarang
+                    </a>
+                </div>
+
+                <!-- SEWA 700+ -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--accent);">700+ FITUR</div>
+                    <div class="product-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="product-title">Sewa Bot Pro</h3>
+                    <p style="color: #6b7280; margin-bottom: 15px;">Sewa bot dengan 700+ fitur untuk kebutuhan advanced</p>
+                    
+                    <div class="product-price">Rp 80.000 <span>/ bulan</span></div>
+                    
+                    <div class="tech-tag">
+                        <i class="fab fa-js"></i> TypeScript ESM Only
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Semua fitur 300+</li>
+                        <li><i class="fas fa-check"></i> Total 700+ Fitur</li>
+                        <li><i class="fas fa-check"></i> AI GPT-4 Integration</li>
+                        <li><i class="fas fa-check"></i> Image Generator</li>
+                        <li><i class="fas fa-check"></i> Voice Recognition</li>
+                        <li><i class="fas fa-check"></i> VIP Support 24/7</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20PRO%2080k%2Fbulan" 
+                       class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Sewa Sekarang
+                    </a>
+                </div>
+
+                <!-- SEWA 1700+ -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--primary);">1700+ FITUR</div>
+                    <div class="product-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="product-title">Sewa Bot Ultimate</h3>
+                    <p style="color: #6b7280; margin-bottom: 15px;">Sewa bot dengan 1700+ fitur untuk kebutuhan bisnis</p>
+                    
+                    <div class="product-price">Rp 120.000 <span>/ bulan</span></div>
+                    
+                    <div class="tech-tag">
+                        <i class="fab fa-js"></i> TypeScript ESM Plugin
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Semua fitur 700+</li>
+                        <li><i class="fas fa-check"></i> Total 1700+ Fitur</li>
+                        <li><i class="fas fa-check"></i> Multi AI Integration</li>
+                        <li><i class="fas fa-check"></i> Custom Module Request</li>
+                        <li><i class="fas fa-check"></i> Dedicated Server</li>
+                        <li><i class="fas fa-check"></i> White Label Option</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20ULTIMATE%20120k%2Fbulan" 
+                       class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Sewa Sekarang
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE BOT -->
+        <section class="service-section">
+            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--dark);">
+                <i class="fas fa-tools"></i> SERVICE BOT WA
+            </h2>
+            <p style="color: #6b7280; margin-bottom: 25px;">
+                Jasa service untuk bot WhatsApp Anda • Perbaikan • Tambah fitur • Tutor private
+            </p>
+            
+            <div class="product-card" style="max-width: 800px; margin: 0 auto;">
+                <div class="product-badge" style="background: #ef4444;">FULL SERVICE</div>
+                <div class="product-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="product-title">Service Bot WhatsApp</h3>
+                
+                <div class="product-price">Rp 100.000</div>
+                
+                <div class="tech-tag">
+                    <i class="fab fa-js"></i> TypeScript ESM Expert
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 25px 0;">
+                    <div>
+                        <h4><i class="fas fa-wrench"></i> Perbaikan Bot</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem;">Fix error, crash, bug</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-plus-circle"></i> Tambah Fitur</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem;">Custom feature request</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-graduation-cap"></i> Tutor Private</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem;">Belajar manage bot</p>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/6282353377184?text=Saya%20butuh%20SERVICE%20BOT%20WA%20100k" 
+                   class="btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Konsultasi Service
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section>
+            <h2 style="text-align: center; font-size: 2rem; margin: 40px 0 30px; color: var(--dark);">
+                📞 KONTAK & ORDER
+            </h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div style="width: 50px; height: 50px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-size: 1.3rem;">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p style="color: #6b7280; margin: 10px 0;">6282353377184</p>
+                    <a href="https://wa.me/6282353377184" class="btn" style="padding: 12px 20px;">Chat Sekarang</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div style="width: 50px; height: 50px; background: #0088cc; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-size: 1.3rem;">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram</h3>
+                    <p style="color: #6b7280; margin: 10px 0;">@BayxdHosting</p>
+                    <a href="https://t.me/BayxdHosting" class="btn" style="padding: 12px 20px; background: #0088cc;">Chat di TG</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div style="width: 50px; height: 50px; background: #FF0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-size: 1.3rem;">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube</h3>
+                    <p style="color: #6b7280; margin: 10px 0;">@bayxd077</p>
+                    <a href="https://youtube.com/@bayxd077" class="btn" style="padding: 12px 20px; background: #FF0000;">Subscribe</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px;">WHATSAPP BOT STORE</h3>
+            <p style="color: #6b7280; margin-bottom: 20px;">
+                TypeScript ESM Only • 300+ • 700+ • 1700+ Fitur
+            </p>
+            
+            <div style="margin: 30px 0;">
+                <a href="https://wa.me/6282353377184" style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: 600;">
+                    <i class="fab fa-whatsapp"></i> ORDER VIA WHATSAPP
+                </a>
+            </div>
+            
+            <p style="color: #9ca3af; font-size: 0.9rem; margin-top: 30px;">
+                © 2024 produtycalabayhost.biz.id • WhatsApp Bot Solutions
+            </p>
+        </footer>
+    </div>
 
     <script>
-        // Smooth scroll untuk navigasi
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId.startsWith('#')) {
-                    const targetElement = document.querySelector(targetId);
-                    if(targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
+        // Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
                     }
-                }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.5s ease';
+                observer.observe(card);
             });
-        });
 
-        // Animasi saat scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if(window.scrollY > 100) {
-                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.2)';
-            } else {
-                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-            }
-        });
-
-        // Alert untuk tombol
-        document.querySelector('.btn').addEventListener('click', function(e) {
-            if(this.getAttribute('href') === '#services') {
-                e.preventDefault();
-                alert('Selamat! Website Anda sudah aktif. Sekarang Anda bisa mulai menambahkan konten sesuai kebutuhan.');
-            }
+            // Update year
+            document.querySelector('footer p:last-child').textContent = 
+                document.querySelector('footer p:last-child').textContent.replace('2024', new Date().getFullYear());
         });
     </script>
 </body>
