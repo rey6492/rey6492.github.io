@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SELL SCRIPT • SEWABOT • SERVICE BOT - TypeScript ESM | YouTube @bayxd077</title>
+    <title>WHATSAPP BOT • Script 300-1700 Fitur • Sewa Max 50K • TypeScript ESM</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* MODERN DESIGN */
         :root {
-            --primary: #3b82f6;
-            --primary-dark: #2563eb;
+            --primary: #6366f1;
             --secondary: #10b981;
             --accent: #f59e0b;
-            --ts-blue: #3178c6;
+            --ts: #3178c6;
             --dark: #111827;
             --light: #f8fafc;
             --card: #ffffff;
             --border: #e5e7eb;
             --shadow: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.1);
-            --radius: 12px;
-            --radius-lg: 16px;
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         * {
@@ -43,139 +39,105 @@
             padding: 0 20px;
         }
 
-        /* HEADER BESAR */
+        /* HEADER */
         .main-header {
             background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
-            padding: 60px 0 40px;
+            padding: 50px 0 30px;
             text-align: center;
-            border-radius: 0 0 30px 30px;
+            border-radius: 0 0 25px 25px;
             margin-bottom: 40px;
-            box-shadow: var(--shadow-lg);
         }
 
         .main-title {
-            font-size: 3.2rem;
+            font-size: 2.8rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #ffffff, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: white;
             margin-bottom: 15px;
         }
 
-        .price-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+        .price-tag {
+            display: inline-block;
             background: linear-gradient(135deg, var(--secondary), var(--accent));
             color: white;
             padding: 12px 30px;
             border-radius: 50px;
             font-size: 1.3rem;
             font-weight: 700;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
-        .tech-badge {
+        .ts-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--ts-blue);
+            background: var(--ts);
             color: white;
             padding: 8px 20px;
             border-radius: 30px;
             font-size: 0.9rem;
-            margin: 10px 5px;
+            margin: 5px;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 30px;
+            margin-top: 25px;
             flex-wrap: wrap;
         }
 
         .social-btn {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 25px;
+            padding: 10px 20px;
             background: rgba(255,255,255,0.1);
             color: white;
-            border-radius: 10px;
+            border-radius: 8px;
             text-decoration: none;
             border: 1px solid rgba(255,255,255,0.2);
-            transition: all 0.3s ease;
         }
 
-        .social-btn:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-3px);
-        }
-
-        .social-btn.youtube {
-            background: #ff0000;
-            border: none;
-        }
-
-        /* PRODUK GRID */
-        .products-grid {
+        /* PRODUK */
+        .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             margin: 40px 0;
         }
 
         .product-card {
             background: var(--card);
-            border-radius: var(--radius-lg);
-            padding: 30px;
+            border-radius: 15px;
+            padding: 25px;
             box-shadow: var(--shadow);
             border: 2px solid var(--border);
             transition: all 0.3s ease;
-            position: relative;
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
         }
 
         .product-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             background: var(--secondary);
             color: white;
-            padding: 6px 15px;
+            padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .product-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            color: white;
-            font-size: 1.5rem;
+            display: inline-block;
+            margin-bottom: 15px;
         }
 
         .product-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 10px;
-            color: var(--dark);
         }
 
         .product-price {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--dark);
             margin: 15px 0;
@@ -184,41 +146,34 @@
         .product-price span {
             font-size: 0.9rem;
             color: #6b7280;
-            font-weight: 500;
         }
 
-        .tech-tag {
+        .esm-tag {
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            background: #e0f2fe;
-            color: var(--ts-blue);
-            padding: 6px 12px;
+            background: #dbeafe;
+            color: var(--ts);
+            padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
-            margin: 5px;
             font-weight: 600;
+            margin: 5px 0;
         }
 
         .features-list {
             list-style: none;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .features-list li {
             padding: 8px 0;
             border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
+            font-size: 0.9rem;
         }
 
         .features-list li:last-child {
             border-bottom: none;
-        }
-
-        .features-list li i {
-            color: var(--secondary);
-            margin-right: 10px;
         }
 
         /* BUTTON */
@@ -226,62 +181,56 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 15px 30px;
+            padding: 12px 25px;
             background: #25D366;
             color: white;
-            border-radius: 10px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             width: 100%;
             justify-content: center;
-            margin-top: 20px;
-            transition: all 0.3s ease;
+            margin-top: 15px;
         }
 
         .btn:hover {
             background: #1da851;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
         }
 
-        /* SERVICE SECTION */
-        .service-section {
+        /* SERVICE */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .service-card {
             background: #f0f9ff;
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            margin: 40px 0;
-            border-left: 5px solid var(--primary);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 4px solid var(--primary);
         }
 
         /* CONTACT */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 25px;
-            border-radius: var(--radius);
-            text-align: center;
-            box-shadow: var(--shadow);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
         }
 
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 30px 0;
             color: var(--dark);
             border-top: 1px solid var(--border);
             margin-top: 40px;
         }
 
         @media (max-width: 768px) {
-            .main-title { font-size: 2.2rem; }
-            .products-grid { grid-template-columns: 1fr; }
-            .container { padding: 0 15px; }
+            .main-title { font-size: 2rem; }
+            .product-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -289,367 +238,334 @@
     <div class="container">
         <!-- HEADER -->
         <header class="main-header">
-            <h1 class="main-title">SELL SCRIPT • SEWABOT • SERVICE BOT</h1>
+            <h1 class="main-title">WHATSAPP BOT STORE</h1>
             
-            <div class="price-badge">
-                <i class="fas fa-tags"></i>
-                HARGA TERJANGKAU • KUALITAS PREMIUM
+            <div class="price-tag">
+                <i class="fas fa-tag"></i> SCRIPT MAX 100K • SEWA MAX 50K
             </div>
             
             <div>
-                <span class="tech-badge">
-                    <i class="fab fa-js"></i> TypeScript ESM Only
+                <span class="ts-badge">
+                    <i class="fab fa-js"></i> TypeScript ESM ONLY
                 </span>
-                <span class="tech-badge">
-                    <i class="fas fa-bolt"></i> 300+ • 700+ • 1700+ Fitur
+                <span class="ts-badge">
+                    <i class="fas fa-code"></i> 300-1700 Fitur
                 </span>
             </div>
             
-            <p style="color: #d1d5db; max-width: 800px; margin: 20px auto; font-size: 1.1rem;">
-                WhatsApp Bot dengan teknologi TypeScript ESM terbaru • Performa maksimal • Update rutin
+            <p style="color: #d1d5db; max-width: 800px; margin: 15px auto; font-size: 1rem;">
+                Bot WhatsApp TypeScript ESM • Script 300-1700 Fitur • Sewa Permanen 50K • Service Lengkap
             </p>
             
             <div class="social-links">
-                <a href="https://youtube.com/@bayxd077" class="social-btn youtube" target="_blank">
+                <a href="https://youtube.com/@bayxd077" class="social-btn" style="background: #FF0000;">
                     <i class="fab fa-youtube"></i> @bayxd077
                 </a>
-                <a href="https://wa.me/6282353377184" class="social-btn">
+                <a href="https://wa.me/6282353377184" class="social-btn" style="background: #25D366;">
                     <i class="fab fa-whatsapp"></i> 6282353377184
                 </a>
-                <a href="https://t.me/BayxdHosting" class="social-btn">
+                <a href="https://t.me/BayxdHosting" class="social-btn" style="background: #0088cc;">
                     <i class="fab fa-telegram"></i> @BayxdHosting
                 </a>
             </div>
         </header>
 
-        <!-- SELL SCRIPT (HARGA LEBIH MAHAL) -->
+        <!-- SELL SCRIPT (300-1700 FITUR) -->
         <section>
-            <h2 style="font-size: 2.2rem; margin-bottom: 25px; color: var(--dark); text-align: center;">
-                <i class="fas fa-code"></i> SELL SCRIPT BOT WA
+            <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--dark);">
+                <i class="fas fa-code"></i> SELL SCRIPT (300-1700 FITUR)
             </h2>
-            <p style="text-align: center; color: #6b7280; margin-bottom: 30px;">
-                Beli source code lengkap dengan teknologi TypeScript ESM • Full ownership • Free updates
-            </p>
             
-            <div class="products-grid">
-                <!-- BASIC SCRIPT -->
+            <div class="product-grid">
+                <!-- SCRIPT 300+ -->
                 <div class="product-card">
-                    <div class="product-badge" style="background: var(--secondary);">BASIC</div>
-                    <div class="product-icon">
-                        <i class="fas fa-file-code"></i>
+                    <div class="product-badge">300+ FITUR</div>
+                    <h3 class="product-title">Script 300+ Fitur</h3>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Script WA Bot dengan 300+ fitur lengkap</p>
+                    
+                    <div class="product-price">Rp 50.000</div>
+                    
+                    <div class="esm-tag">
+                        <i class="fab fa-js"></i> TypeScript ESM Only
                     </div>
-                    <h3 class="product-title">Basic Script</h3>
-                    <p style="color: #6b7280; margin-bottom: 15px;">Script WhatsApp Bot dengan fitur dasar</p>
+                    
+                    <ul class="features-list">
+                        <li>✅ 300+ Fitur lengkap</li>
+                        <li>✅ Auto Reply System</li>
+                        <li>✅ Downloader Module</li>
+                        <li>✅ AI ChatGPT Basic</li>
+                        <li>✅ Web Dashboard</li>
+                        <li>✅ Multi Device</li>
+                        <li>✅ Support 1 bulan</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SCRIPT%20300%2B%20Fitur%2050k" 
+                       class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Order Script 300+
+                    </a>
+                </div>
+
+                <!-- SCRIPT 700+ -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--accent);">700+ FITUR</div>
+                    <h3 class="product-title">Script 700+ Fitur</h3>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Script WA Bot dengan 700+ fitur premium</p>
                     
                     <div class="product-price">Rp 80.000</div>
                     
-                    <div class="tech-tag">
-                        <i class="fab fa-js"></i> TypeScript ESM
-                    </div>
-                    
-                    <ul class="features-list">
-                        <li><i class="fas fa-check"></i> 100+ Fitur Dasar</li>
-                        <li><i class="fas fa-check"></i> Auto Reply System</li>
-                        <li><i class="fas fa-check"></i> Downloader Module</li>
-                        <li><i class="fas fa-check"></i> TypeScript Source Code</li>
-                        <li><i class="fas fa-check"></i> Documentation</li>
-                        <li><i class="fas fa-check"></i> Support 1 Minggu</li>
-                    </ul>
-                    
-                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20order%20BASIC%20SCRIPT%2080k" 
-                       class="btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Order Sekarang
-                    </a>
-                </div>
-
-                <!-- PREMIUM SCRIPT -->
-                <div class="product-card">
-                    <div class="product-badge" style="background: var(--accent);">PREMIUM</div>
-                    <div class="product-icon">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <h3 class="product-title">Premium Script</h3>
-                    <p style="color: #6b7280; margin-bottom: 15px;">Script WhatsApp Bot dengan fitur lengkap</p>
-                    
-                    <div class="product-price">Rp 150.000</div>
-                    
-                    <div class="tech-tag">
-                        <i class="fab fa-js"></i> TypeScript ESM Only
-                    </div>
-                    
-                    <ul class="features-list">
-                        <li><i class="fas fa-check"></i> 300+ Fitur Lengkap</li>
-                        <li><i class="fas fa-check"></i> AI ChatGPT Integration</li>
-                        <li><i class="fas fa-check"></i> Multi Device Support</li>
-                        <li><i class="fas fa-check"></i> Web Dashboard</li>
-                        <li><i class="fas fa-check"></i> MongoDB Database</li>
-                        <li><i class="fas fa-check"></i> Support 1 Bulan</li>
-                        <li><i class="fas fa-check"></i> Free Updates 3 Bulan</li>
-                    </ul>
-                    
-                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20order%20PREMIUM%20SCRIPT%20150k" 
-                       class="btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Order Sekarang
-                    </a>
-                </div>
-
-                <!-- ULTIMATE SCRIPT -->
-                <div class="product-card">
-                    <div class="product-badge" style="background: var(--primary);">ULTIMATE</div>
-                    <div class="product-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3 class="product-title">Ultimate Script</h3>
-                    <p style="color: #6b7280; margin-bottom: 15px;">Script WhatsApp Bot dengan semua fitur premium</p>
-                    
-                    <div class="product-price">Rp 250.000</div>
-                    
-                    <div class="tech-tag">
+                    <div class="esm-tag">
                         <i class="fab fa-js"></i> TypeScript ESM Plugin
                     </div>
                     
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> 700+ Fitur Ultimate</li>
-                        <li><i class="fas fa-check"></i> AI GPT-4 + Gemini</li>
-                        <li><i class="fas fa-check"></i> Voice & Image Recognition</li>
-                        <li><i class="fas fa-check"></i> Advanced Dashboard</li>
-                        <li><i class="fas fa-check"></i> Custom Module Request</li>
-                        <li><i class="fas fa-check"></i> Support 3 Bulan</li>
-                        <li><i class="fas fa-check"></i> Lifetime Updates</li>
+                        <li>✅ 700+ Fitur premium</li>
+                        <li>✅ AI GPT-4 Integration</li>
+                        <li>✅ Image Generator</li>
+                        <li>✅ Voice Recognition</li>
+                        <li>✅ Advanced Dashboard</li>
+                        <li>✅ MongoDB Database</li>
+                        <li>✅ Support 3 bulan</li>
                     </ul>
                     
-                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20order%20ULTIMATE%20SCRIPT%20250k" 
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SCRIPT%20700%2B%20Fitur%2080k" 
                        class="btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Order Sekarang
+                        <i class="fab fa-whatsapp"></i> Order Script 700+
+                    </a>
+                </div>
+
+                <!-- SCRIPT 1700+ -->
+                <div class="product-card">
+                    <div class="product-badge" style="background: var(--primary);">1700+ FITUR</div>
+                    <h3 class="product-title">Script 1700+ Fitur</h3>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Script WA Bot dengan 1700+ fitur ultimate</p>
+                    
+                    <div class="product-price">Rp 100.000</div>
+                    
+                    <div class="esm-tag">
+                        <i class="fab fa-js"></i> TypeScript ESM Ultimate
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li>✅ 1700+ Fitur ultimate</li>
+                        <li>✅ Multi AI Integration</li>
+                        <li>✅ Voice & Image AI</li>
+                        <li>✅ Custom Module System</li>
+                        <li>✅ White Label Ready</li>
+                        <li>✅ Dedicated Support</li>
+                        <li>✅ Lifetime Updates</li>
+                    </ul>
+                    
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SCRIPT%201700%2B%20Fitur%20100k" 
+                       class="btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Order Script 1700+
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- SEWA BOT (HARGA LEBIH MURAH) -->
-        <section style="margin-top: 60px;">
-            <h2 style="font-size: 2.2rem; margin-bottom: 25px; color: var(--dark); text-align: center;">
-                <i class="fas fa-robot"></i> SEWA BOT WA
+        <!-- SEWA BOT (MAX 50K PERMANEN) -->
+        <section style="margin-top: 40px;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--dark);">
+                <i class="fas fa-robot"></i> SEWA BOT (MAX 50K PERMANEN)
             </h2>
-            <p style="text-align: center; color: #6b7280; margin-bottom: 30px;">
-                Sewa bot yang sudah online 24/7 • No installation needed • Server premium
-            </p>
             
-            <div class="products-grid">
-                <!-- SEWA 300+ -->
+            <div class="product-grid">
+                <!-- SEWA BOT 50K -->
                 <div class="product-card">
-                    <div class="product-badge" style="background: var(--secondary);">300+ FITUR</div>
-                    <div class="product-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="product-title">Sewa Bot Basic</h3>
-                    <p style="color: #6b7280; margin-bottom: 15px;">Sewa bot dengan 300+ fitur untuk kebutuhan standar</p>
+                    <div class="product-badge" style="background: var(--secondary);">SEWA 50K</div>
+                    <h3 class="product-title">Sewa Bot Premium</h3>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Sewa bot premium online 24/7</p>
                     
                     <div class="product-price">Rp 50.000 <span>/ bulan</span></div>
                     
-                    <div class="tech-tag">
+                    <div class="esm-tag">
                         <i class="fab fa-js"></i> TypeScript ESM
                     </div>
                     
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Bot Online 24/7</li>
-                        <li><i class="fas fa-check"></i> 300+ Fitur Lengkap</li>
-                        <li><i class="fas fa-check"></i> TypeScript ESM Plugin</li>
-                        <li><i class="fas fa-check"></i> Server Premium</li>
-                        <li><i class="fas fa-check"></i> Auto Backup</li>
-                        <li><i class="fas fa-check"></i> Support Priority</li>
+                        <li>✅ Bot online 24/7</li>
+                        <li>✅ 500+ Fitur lengkap</li>
+                        <li>✅ Server premium</li>
+                        <li>✅ No installation needed</li>
+                        <li>✅ Auto backup daily</li>
+                        <li>✅ Support priority</li>
+                        <li>✅ Harga permanen 50K</li>
                     </ul>
                     
-                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20BASIC%2050k%2Fbulan" 
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20PREMIUM%2050k%2Fbulan" 
                        class="btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Sewa Sekarang
+                        <i class="fab fa-whatsapp"></i> Sewa Bot 50K
                     </a>
                 </div>
 
-                <!-- SEWA 700+ -->
+                <!-- SEWA BOT 50K PRO -->
                 <div class="product-card">
-                    <div class="product-badge" style="background: var(--accent);">700+ FITUR</div>
-                    <div class="product-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
+                    <div class="product-badge" style="background: var(--accent);">SEWA 50K PRO</div>
                     <h3 class="product-title">Sewa Bot Pro</h3>
-                    <p style="color: #6b7280; margin-bottom: 15px;">Sewa bot dengan 700+ fitur untuk kebutuhan advanced</p>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Sewa bot pro dengan fitur AI</p>
                     
-                    <div class="product-price">Rp 80.000 <span>/ bulan</span></div>
+                    <div class="product-price">Rp 50.000 <span>/ bulan</span></div>
                     
-                    <div class="tech-tag">
+                    <div class="esm-tag">
                         <i class="fab fa-js"></i> TypeScript ESM Only
                     </div>
                     
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Semua fitur 300+</li>
-                        <li><i class="fas fa-check"></i> Total 700+ Fitur</li>
-                        <li><i class="fas fa-check"></i> AI GPT-4 Integration</li>
-                        <li><i class="fas fa-check"></i> Image Generator</li>
-                        <li><i class="fas fa-check"></i> Voice Recognition</li>
-                        <li><i class="fas fa-check"></i> VIP Support 24/7</li>
+                        <li>✅ Semua fitur premium</li>
+                        <li>✅ AI ChatGPT included</li>
+                        <li>✅ Image generator</li>
+                        <li>✅ Voice recognition</li>
+                        <li>✅ Multi device support</li>
+                        <li>✅ VIP support 24/7</li>
+                        <li>✅ Harga tetap 50K</li>
                     </ul>
                     
-                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20PRO%2080k%2Fbulan" 
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20PRO%2050k%2Fbulan" 
                        class="btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Sewa Sekarang
+                        <i class="fab fa-whatsapp"></i> Sewa Bot Pro 50K
                     </a>
                 </div>
 
-                <!-- SEWA 1700+ -->
+                <!-- SEWA BOT 50K ULTIMATE -->
                 <div class="product-card">
-                    <div class="product-badge" style="background: var(--primary);">1700+ FITUR</div>
-                    <div class="product-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
+                    <div class="product-badge" style="background: var(--primary);">SEWA 50K ULTIMATE</div>
                     <h3 class="product-title">Sewa Bot Ultimate</h3>
-                    <p style="color: #6b7280; margin-bottom: 15px;">Sewa bot dengan 1700+ fitur untuk kebutuhan bisnis</p>
+                    <p style="color: #6b7280; font-size: 0.9rem;">Sewa bot ultimate semua fitur</p>
                     
-                    <div class="product-price">Rp 120.000 <span>/ bulan</span></div>
+                    <div class="product-price">Rp 50.000 <span>/ bulan</span></div>
                     
-                    <div class="tech-tag">
+                    <div class="esm-tag">
                         <i class="fab fa-js"></i> TypeScript ESM Plugin
                     </div>
                     
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Semua fitur 700+</li>
-                        <li><i class="fas fa-check"></i> Total 1700+ Fitur</li>
-                        <li><i class="fas fa-check"></i> Multi AI Integration</li>
-                        <li><i class="fas fa-check"></i> Custom Module Request</li>
-                        <li><i class="fas fa-check"></i> Dedicated Server</li>
-                        <li><i class="fas fa-check"></i> White Label Option</li>
+                        <li>✅ 1000+ Fitur ultimate</li>
+                        <li>✅ Multi AI integration</li>
+                        <li>✅ Custom module request</li>
+                        <li>✅ Dedicated server</li>
+                        <li>✅ White label option</li>
+                        <li>✅ Enterprise support</li>
+                        <li>✅ Harga tetap 50K</li>
                     </ul>
                     
-                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20ULTIMATE%20120k%2Fbulan" 
+                    <a href="https://wa.me/6282353377184?text=Saya%20mau%20SEWA%20BOT%20ULTIMATE%2050k%2Fbulan" 
                        class="btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Sewa Sekarang
+                        <i class="fab fa-whatsapp"></i> Sewa Bot Ultimate 50K
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICE BOT -->
-        <section class="service-section">
-            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--dark);">
-                <i class="fas fa-tools"></i> SERVICE BOT WA
+        <!-- SERVICE BOT (4 LAYANAN) -->
+        <section style="margin-top: 40px;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--dark);">
+                <i class="fas fa-tools"></i> SERVICE BOT (4 LAYANAN)
             </h2>
-            <p style="color: #6b7280; margin-bottom: 25px;">
-                Jasa service untuk bot WhatsApp Anda • Perbaikan • Tambah fitur • Tutor private
-            </p>
             
-            <div class="product-card" style="max-width: 800px; margin: 0 auto;">
-                <div class="product-badge" style="background: #ef4444;">FULL SERVICE</div>
-                <div class="product-icon">
-                    <i class="fas fa-headset"></i>
-                </div>
-                <h3 class="product-title">Service Bot WhatsApp</h3>
-                
-                <div class="product-price">Rp 100.000</div>
-                
-                <div class="tech-tag">
-                    <i class="fab fa-js"></i> TypeScript ESM Expert
+            <div class="service-grid">
+                <div class="service-card">
+                    <h4><i class="fas fa-plus-circle"></i> Tambah Fitur</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem; margin-top: 10px;">Request fitur custom untuk bot Anda</p>
+                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-top: 15px;">Rp 50.000</div>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 25px 0;">
-                    <div>
-                        <h4><i class="fas fa-wrench"></i> Perbaikan Bot</h4>
-                        <p style="color: #6b7280; font-size: 0.9rem;">Fix error, crash, bug</p>
-                    </div>
-                    <div>
-                        <h4><i class="fas fa-plus-circle"></i> Tambah Fitur</h4>
-                        <p style="color: #6b7280; font-size: 0.9rem;">Custom feature request</p>
-                    </div>
-                    <div>
-                        <h4><i class="fas fa-graduation-cap"></i> Tutor Private</h4>
-                        <p style="color: #6b7280; font-size: 0.9rem;">Belajar manage bot</p>
-                    </div>
+                <div class="service-card">
+                    <h4><i class="fas fa-wrench"></i> Fix Error</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem; margin-top: 10px;">Perbaiki error, bug, crash bot</p>
+                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-top: 15px;">Rp 50.000</div>
                 </div>
                 
-                <a href="https://wa.me/6282353377184?text=Saya%20butuh%20SERVICE%20BOT%20WA%20100k" 
-                   class="btn" target="_blank">
+                <div class="service-card">
+                    <h4><i class="fas fa-graduation-cap"></i> Tutor Private</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem; margin-top: 10px;">Belajar manage bot dari dasar</p>
+                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-top: 15px;">Rp 100.000</div>
+                </div>
+                
+                <div class="service-card">
+                    <h4><i class="fas fa-cogs"></i> Setup & Install</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem; margin-top: 10px;">Install & setup bot di server Anda</p>
+                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-top: 15px;">Rp 75.000</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://wa.me/6282353377184?text=Saya%20butuh%20SERVICE%20BOT%20(tambah%20fitur%2Ffix%20error%2Ftutor%2Fsetup)" 
+                   class="btn" target="_blank" style="max-width: 300px; margin: 0 auto;">
                     <i class="fab fa-whatsapp"></i> Konsultasi Service
                 </a>
             </div>
         </section>
 
         <!-- CONTACT -->
-        <section>
-            <h2 style="text-align: center; font-size: 2rem; margin: 40px 0 30px; color: var(--dark);">
-                📞 KONTAK & ORDER
+        <section style="margin-top: 40px;">
+            <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 25px; color: var(--dark);">
+                📞 KONTAK ORDER
             </h2>
             
             <div class="contact-grid">
-                <div class="contact-card">
-                    <div style="width: 50px; height: 50px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-size: 1.3rem;">
+                <div style="text-align: center;">
+                    <div style="width: 50px; height: 50px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white;">
                         <i class="fab fa-whatsapp"></i>
                     </div>
-                    <h3>WhatsApp</h3>
-                    <p style="color: #6b7280; margin: 10px 0;">6282353377184</p>
-                    <a href="https://wa.me/6282353377184" class="btn" style="padding: 12px 20px;">Chat Sekarang</a>
+                    <h4>WhatsApp</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem;">6282353377184</p>
                 </div>
                 
-                <div class="contact-card">
-                    <div style="width: 50px; height: 50px; background: #0088cc; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-size: 1.3rem;">
+                <div style="text-align: center;">
+                    <div style="width: 50px; height: 50px; background: #0088cc; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white;">
                         <i class="fab fa-telegram"></i>
                     </div>
-                    <h3>Telegram</h3>
-                    <p style="color: #6b7280; margin: 10px 0;">@BayxdHosting</p>
-                    <a href="https://t.me/BayxdHosting" class="btn" style="padding: 12px 20px; background: #0088cc;">Chat di TG</a>
+                    <h4>Telegram</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem;">@BayxdHosting</p>
                 </div>
                 
-                <div class="contact-card">
-                    <div style="width: 50px; height: 50px; background: #FF0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-size: 1.3rem;">
+                <div style="text-align: center;">
+                    <div style="width: 50px; height: 50px; background: #FF0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white;">
                         <i class="fab fa-youtube"></i>
                     </div>
-                    <h3>YouTube</h3>
-                    <p style="color: #6b7280; margin: 10px 0;">@bayxd077</p>
-                    <a href="https://youtube.com/@bayxd077" class="btn" style="padding: 12px 20px; background: #FF0000;">Subscribe</a>
+                    <h4>YouTube</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem;">@bayxd077</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <div style="width: 50px; height: 50px; background: #EA4335; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email</h4>
+                    <p style="color: #6b7280; font-size: 0.9rem;">juraganbawan321@gmail.com</p>
                 </div>
             </div>
         </section>
 
         <!-- FOOTER -->
         <footer>
-            <h3 style="font-size: 1.5rem; margin-bottom: 20px;">WHATSAPP BOT STORE</h3>
-            <p style="color: #6b7280; margin-bottom: 20px;">
-                TypeScript ESM Only • 300+ • 700+ • 1700+ Fitur
+            <h3 style="font-size: 1.3rem; margin-bottom: 10px;">WHATSAPP BOT STORE</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;">
+                TypeScript ESM Only • Script 300-1700 Fitur • Sewa Max 50K • 4 Layanan Service
             </p>
             
-            <div style="margin: 30px 0;">
-                <a href="https://wa.me/6282353377184" style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: 600;">
-                    <i class="fab fa-whatsapp"></i> ORDER VIA WHATSAPP
-                </a>
-            </div>
+            <a href="https://wa.me/6282353377184" 
+               style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                <i class="fab fa-whatsapp"></i> ORDER SEKARANG
+            </a>
             
-            <p style="color: #9ca3af; font-size: 0.9rem; margin-top: 30px;">
-                © 2024 produtycalabayhost.biz.id • WhatsApp Bot Solutions
+            <p style="color: #9ca3af; font-size: 0.8rem; margin-top: 25px;">
+                © <span id="year"></span> produtycalabayhost.biz.id • WhatsApp Bot Solutions
             </p>
         </footer>
     </div>
 
     <script>
-        // Animation
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate cards on scroll
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.product-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.5s ease';
-                observer.observe(card);
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Animasi sederhana
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
             });
-
-            // Update year
-            document.querySelector('footer p:last-child').textContent = 
-                document.querySelector('footer p:last-child').textContent.replace('2024', new Date().getFullYear());
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
         });
     </script>
 </body>
